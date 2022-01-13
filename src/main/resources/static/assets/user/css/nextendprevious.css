@@ -1,0 +1,23 @@
+.statistical .button {
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+  padding-top: 2px;
+}
+ .previous {
+  background-color: #12c7b8;
+  color: #f8f7f8;
+  font-size: 2em;
+  font-weight: bold;
+  border: 0;
+}
+ .next2 {
+  background-color: #f8f7f8;
+  color: gray;
+  font-size: 2em;
+  border: 0;
+  color: #12c7b8;
+  font-weight: bold;
+}

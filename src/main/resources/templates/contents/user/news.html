@@ -1,0 +1,68 @@
+<div lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      data-layout-decorate="~{layout-user}"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:fragment="content">
+
+<!-- jumbotron -->
+<div class="site-section">
+    <div class="container">
+    
+    <div class="row">
+    <div class="section-title">
+   	 <h2 style="margin-bottom: 0;" >TIN TỨC</h2>
+    </div>
+    
+  		<div class="input-group ml-auto " style=" width: 250px;" >
+            <input class="form-control py-2 border-right-0 border"  type="search" placeholder="Search & enter" id="search">
+            <span class="input-group-append">
+                <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
+            </span>
+     	 </div>
+    </div>
+
+    <br/>
+    <div class="row">
+     <div class=" float-left">    
+      <select class="custom-select " id="size">  
+        <option value="6">6</option>
+        <option value="15">15</option>
+        <option value="30">30</option>
+      </select>
+     </div>
+   	 <div class=" ml-auto" >    
+      <select class="custom-select" id="sort-type">  
+        <option value="DESC">Gần đây</option>
+        <option value="ASC">Cũ hơn</option>
+      </select>
+     </div>
+    </div>
+   
+      <div class="row" id="content">  
+      
+      
+       <!--  
+        <div class="col-lg-6 d-flex justify-content-start" style="margin:15px 0; padding: 0;">
+          <img src="https://drive.google.com/uc?id=1lu_uOr-ZSvyD1dNkINo-SLFz8dcQTD4v" alt="Image" class="col-lg-5">      
+          <div class="col-lg-7">
+          <h2 class="h5 text-black mb-3"><a href="single.html">This Is The Day, Party, Party!</a></h2>
+            <span class="d-block text-secondary small text-uppercase">2020-02-29</span>
+          </div>
+        </div>
+        -->
+      </div>
+         
+    </div>
+  
+   <div style="margin-top: 50px;"
+			class="row mx-auto justify-content-center align-items-center flex-column ">
+			<ul style="font-size: 15px;" id="pagination-demo"
+				class="pagination-md"></ul>
+		</div>
+  </div>
+  
+  
+  <script th:src="@{/assets/user/paging/jquery.twbsPagination.js}"></script>
+  <script th:src="@{/assets/user/js-dev/news.js}"></script>
+  
+  </div>
+  

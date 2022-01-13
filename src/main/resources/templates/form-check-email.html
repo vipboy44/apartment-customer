@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html  
+       xmlns:th="http://www.thymeleaf.org">
+      
+<head>
+    <title>Reset password</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+     <link rel="icon" type="image/png" th:href="@{/assets/reset-password/images/icons/lock.png}"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/reset-password/bootstrap/css/bootstrap.min.css}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/reset-password/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/reset-password/animate/animate.css}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/reset-password/css-hamburgers/hamburgers.min.css}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/reset-password/select2/select2.min.css}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/reset-password/css/util.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/reset-password/css/main.css}">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+<div class="contact1">
+    <div class="container-contact1">
+        <div class="contact1-pic js-tilt" data-tilt>
+            <img th:src="@{/assets/reset-password/images/img-01.png}" alt="IMG">
+        </div>
+
+        <form id="form-reset-password" th:action="@{/resetpassword/forgot-password}" method="POST" class="contact1-form validate-form">
+				<span class="contact1-form-title">Đặt lại mật khẩu</span>
+
+            <div class="mb-3">
+                <span style="font-size:14px; color: #1c7430"  th:text="${messageSuccess}"></span>
+                <span style="font-size:14px ;color: #c82333"  th:text="${messageError}"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" >
+                <input class="input1" type="text" name="id" id="id" placeholder="nhập ID căn hộ của bạn">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input">
+                <input class="input1" type="email" name="email" id="email" placeholder="nhập địa chỉ e-mail của bạn">
+                <span class="shadow-input1"></span>
+            </div>
+            <div class="container-contact1-form-btn">
+                <button class="contact1-form-btn" type="submit">
+						<span>
+							Send
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!--===============================================================================================-->
+<script th:src="@{/assets/reset-password/jquery/jquery-3.2.1.min.js}"></script>
+<script th:src="@{/assets/reset-password/validate-jquery/jquery.validate.min.js}"></script>
+<script th:src="@{/assets/reset-password/validate-jquery/additional-methods.min.js}"></script>
+<script th:src="@{/assets/reset-password/js/reset-password.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/assets/reset-password/bootstrap/js/popper.js}"></script>
+<script th:src="@{/assets/reset-password/bootstrap/js/bootstrap.min.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/assets/reset-password/select2/select2.min.js}"></script>
+<!--===============================================================================================-->
+<script th:src="@{/assets/reset-password/tilt/tilt.jquery.min.js}"></script>
+<script >
+    $('.js-tilt').tilt({
+        scale: 1.1
+    })
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async th:src="@{https://www.googletagmanager.com/gtag/js?id=UA-23581568-13}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+</script>
+
+<!--===============================================================================================-->
+</body>
+</html>

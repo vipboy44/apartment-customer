@@ -1,0 +1,14 @@
+<div lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      data-layout-decorate="~{layout-user}"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:fragment="content">
+      
+    <span th:text="${date}" id="date_bill" hidden="true"></span>
+    <div  style="margin:40px 30px;" class="section-title" >
+			<h2 style="margin:0;" id="title-bill"></h2> <i id="paid-title"></i>
+ 	</div>
+   	<div style="margin:30px 30px; background-color: white;"  class="row" id="bill-detail" ></div>
+   	<div style="margin:0px 20px 500px;" id="notfound" hidden="true" class="alert alert-danger" role="alert">Không tìm thấy hóa đơn!</div>
+<script th:src="@{/assets/user/js-dev/bill-detail.js}"></script>
+<script th:src="@{/assets/user/js-dev/search-bill.js}"></script>
+</div>

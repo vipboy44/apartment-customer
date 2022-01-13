@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html   
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+  
+<head th:replace="components/user/head"></head></head>
+<body>
+<!-- Navigation -->
+<nav th:replace="components/user/nav"></nav>
+<!-- Carousel -->
+<div th:replace="components/user/carousel-slide"></div>
+
+<!-- content -->
+<div layout:fragment="content">
+
+ </div>
+<!-- content -->
+<div th:replace="components/user/modal"></div>
+<div th:replace="contents/user/change-password"></div>
+<!-- footer -->
+<footer th:replace="components/user/footer"></footer>
+
+</body>
+
+</html>
